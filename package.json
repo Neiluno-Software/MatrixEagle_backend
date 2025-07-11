@@ -1,0 +1,19 @@
+{
+  "name": "matrixEagle-backend",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/Neiluno-Software/MatrixEagle_backend.git",
+  "author": "alleycat1 <netragonlong@gmail.com>",
+  "scripts": {
+    "start": "node index.js",
+    "server": "nodemon index.js"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "dotenv": "^17.0.1",
+    "express": "^5.1.0",
+    "nodemailer": "^7.0.4",
+    "nodemon": "^3.1.10",
+    "socket.io": "^4.8.1"
+  }
+}
