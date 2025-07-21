@@ -2,6 +2,7 @@
 const nodeMailer = require("nodemailer");
 
 /* Using Hostinger Mail */
+/*
 const transporter = nodeMailer.createTransport({
     host: "smtp.hostinger.com",
     secure: true,
@@ -17,7 +18,18 @@ const transporter = nodeMailer.createTransport({
         user: process.env.HOSTINGER_EMAIL,
         pass: process.env.HOSTINGER_PASSWORD,
     }
+});*/
+
+let transporter = nodeMailer.createTransport({
+  host: 'smtp.hostinger.com',
+  port: 587, // or 465 for SSL/TLS
+  secure: false, // or true for SSL/TLS on port 465
+  auth: {
+    user: process.env.HOSTINGER_EMAIL,
+    pass: process.env.HOSTINGER_PASSWORD,
+  }
 });
+
 
 const sendEmail = async (options, callback) => {
 	const mailOptions = {
